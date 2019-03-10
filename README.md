@@ -25,7 +25,7 @@ Using Post2Ghost allows you to
  - use your favourite editor for writing articles in Markdown
  - stop the copy and past madness between your favourite editor and the Ghost Markdown editor
  - programmatically upload and update draft articles from the command line
- - build a Git centric workflow for articles
+ - build a Git centric workflow for releasing articles
 
 
 ## Initial Setup
