@@ -4,7 +4,7 @@ This repository contains the Python3 CLI application **Post2Ghost** which allows
 
 Post2Ghost allows for a [Git](https://git-scm.com/) centric workflow where articles are authored in Markdown files before being programmatically released to draft articles in Ghost.
 
-This application is used by the authors of [How Hard Can It Be?!](https://how-hard-can-it.be) on a regular base.
+This application is used by the authors of [How Hard Can It Be?!](https://www.how-hard-can-it.be) on a regular base.
 
 
 ## You Have
