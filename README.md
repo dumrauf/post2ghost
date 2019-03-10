@@ -86,7 +86,7 @@ For the initial blog post [How Hard Can It Be?!](https://www.how-hard-can-it.be/
 
 Here, the `feature_image` is stored _locally_ at `images/how-hard-can-it-be.jpg`. Note that the path to the image is _relative_.
 
-The `slug` is manually set to `how-hard-can-it-be` and the `tags` is set to the _existing_ tag `"How Hard Can It Be?!"`. See also the limitations around only using preexisting tags and how to reference them as outlined below.
+The `slug` is manually set to `how-hard-can-it-be` and the `tags` is set to the _existing_ tag `"How Hard Can It Be?!"`. See also the limitations around referencing tags as outlined below.
 
 
 ### A Note on Metadata Inside Markdown Articles
@@ -201,7 +201,6 @@ The following is a list of known limitations when uploading articles.
 
 - The metadata needs to be formatted in valid JSON as currently no JSON parsing errors are detected
 - Tags can only be referred by name
-- Only existing tags can be referenced. However, it's fairly easy to create a new tag as outlined above.
 - Only draft posts can be updated
 
 Feel free to contribute towards eventually removing the above limitations. This is open source after all.
