@@ -208,6 +208,8 @@ Feel free to contribute towards eventually removing the above limitations. This 
 
 ## FAQs
 
+Below is a list of frequently asked questions.
+
 ### Why is Post2Ghost Complaining About Missing Required Keys Even Though I've Supplied Them in the Metadata?!
 
 There's a chance that your metadata JSON isn't actually valid. This will lead to Post2Ghost not being able to detect any metadata and hence complain about missing keys.
