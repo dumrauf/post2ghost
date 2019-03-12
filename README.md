@@ -11,7 +11,7 @@ This application is used by the authors of [How Hard Can It Be?!](https://www.ho
 
 Before you can use Post2Ghost out of the box, you need
  - access to a Ghost installation with the [Ghost v0.1 Public API](https://api.ghost.org/v0.1/docs) enabled (available in up to and including [Ghost release 2.10.1](https://github.com/TryGhost/Ghost/releases/tag/2.10.1))
- - a user account on the Ghost installation
+ - a user account in the Ghost installation
  - a recent version of [`Python3`](https://www.python.org/downloads/)
  - the `ghost-client` Python package available at https://pypi.org/project/ghost-client/
 
@@ -54,8 +54,7 @@ Here, `username` and `password` have been redacted for security reasons — thes
 
 ## Blog Post Metadata
 
-Post2Ghost allows to enrich a blog post written in Markdown with JSON metadata. Here, the _JSON metadata preceds the actual blog article in the same file_ and is used in [Ghost's publishing options](https://docs.ghost.org/faq/publishing-options/) to automatically populate fields like
-
+Post2Ghost allows to enrich a blog post written in Markdown with JSON metadata. Here, the _JSON metadata preceds the actual blog article in the same file_ and is used in [Ghost's publishing options](https://docs.ghost.org/faq/publishing-options/) to automatically populate fields such as
 - title for the blog post
 - excerpt (this is the text alongside the article on the start page)
 - feature image (the image that is being displayed for the article on the start page)
@@ -63,7 +62,7 @@ Post2Ghost allows to enrich a blog post written in Markdown with JSON metadata. 
 - tags (logical folders that the article should be filed under)
 
 
-At a _bare minimium_, `title` and `custom_excerpt` need to be defined as these values are propagated to the corresponding settings for
+At a _bare minimium_, `title` and `custom_excerpt` need to be defined, as these values are propagated to the corresponding settings for
  - Search engines
  - Twitter cards and
  - Facebook cards
@@ -93,14 +92,16 @@ The `slug` is manually set to `how-hard-can-it-be` and the `tags` is set to the 
 
 As described above, the _metadata has to precede the actual blog post inside the same file_.
 
-This is a deliberate design decision in order to keep all information related to a blog post in one place. The only downside  is that the metadata has to be stored in valid JSON in order to be properly detected. Most likely, your editor will get confused by the mix of JSON and Markdown. In case of parsing errors, the upload will fail as the minimum required metadata parameters are missing. Simply go back, fix the JSON errors, and try again.
+This is a deliberate design decision in order to keep all information related to a blog post in one place. The only downside  is that the metadata has to be stored in valid JSON in order to be properly detected. Most likely, your editor will get confused by the mix of JSON and Markdown.
+
+In case of parsing errors, the upload to Ghost will fail as the minimum required metadata parameters are missing. Simply go back, fix the JSON errors, and try again. Tried and tested many times. Mostly due to silly typos or syntax errors. JSON can have a mind of its own.
 
 
 ## Image Handling
 
 Post2Ghost automatically detects and handles all images in a given Markdown file. For that, it replaces references to local files with references to images it has uploaded to the Ghost installation. In case the image has been uploaded by Post2Ghost before, a reference to the previously uploaded image is used. All comparisons are MD5 based and tracked in `~/.post2ghost/uploaded_images.json`.
 
-Moreover, Post2Ghost detects links to external images and leaves them unchanged.
+Moreover, Post2Ghost detects links to external images and leaves them untouched.
 
 
 ## A Minimum Starter Template
@@ -200,7 +201,7 @@ python3 update_tag.py -f /path/to/tag.json
 The following is a list of known limitations when uploading articles.
 
 - The metadata needs to be formatted in valid JSON as currently no JSON parsing errors are detected
-- Tags can only be referred by name
+- Tags can only be referred to by name
 - Only draft posts can be updated
 
 Feel free to contribute towards eventually removing the above limitations. This is open source after all.
@@ -216,7 +217,7 @@ There's a chance that your metadata JSON isn't actually valid. This will lead to
 
 Usually, the solution is to fix the syntax errors of the JSON metadata and try again.
 
-### What's the `post.md.post2ghost.json` File Used For?
+### What's the `*.post2ghost.json` File Used For?
 
 When uploading article `post.md` via Post2Ghost, a file `post.md.post2ghost.json` is created which acts as a _receipt_. It contains the information returned by the Ghost API and is used as the base for all subsequent _updates_ to the same post.
 
