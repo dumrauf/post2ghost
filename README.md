@@ -116,7 +116,7 @@ A minimum starter template is located at [templates/minimum-post.md](templates/m
 
 # Post2Ghost
 
-This post and its metadata was uploaded using Post2Ghost.
+This post and its metadata was uploaded using [Post2Ghost](https://github.com/dumrauf/post2ghost).
 ```
 
 
@@ -136,7 +136,7 @@ A starter template that leverages an external `feature_image` from [Unsplash](ht
 
 # Post2Ghost
 
-This post and its metadata was uploaded using Post2Ghost.
+This post and its metadata was uploaded using [Post2Ghost](https://github.com/dumrauf/post2ghost).
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
