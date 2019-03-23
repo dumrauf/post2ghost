@@ -1,5 +1,6 @@
 import json
 
+from ghost_config.GhostConfigHandler import PostToGhostGhostClient
 from settings import RECEIPT_FILE_SUFFIX
 
 
@@ -25,3 +26,8 @@ class Receipt(dict):
         with open(self._get_receipt_file(), "w") as f:
             json_data = json.dumps(receipt_data, indent=2, sort_keys=True)
             f.write(json_data)
+
+    def fetch_receipt(self):
+        ghost_client = PostToGhostGhostClient()
+        post = ghost_client.posts.get(id=self["id"])
+        self.save_receipt(receipt_data=post)
