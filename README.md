@@ -6,6 +6,8 @@ Post2Ghost allows for a [Git](https://git-scm.com/) centric workflow where artic
 
 This application is used by the authors of [How Hard Can It Be?!](https://www.how-hard-can-it.be) on a regular base.
 
+> For further information, see the corresponding article on [https://www.how-hard-can-it.be/post2ghost/](https://www.how-hard-can-it.be/post2ghost/).
+
 
 ## You Have
 
